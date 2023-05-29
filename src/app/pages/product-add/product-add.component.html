@@ -1,0 +1,14 @@
+<form [formGroup]="productForm" (ngSubmit)="onHandleSubmit()">
+    <div class="mb-3">
+
+        <label for="" class="form-label">Nhap Ten</label><br>
+        <input type="text" formControlName="name"/><br>
+        <label for="" class="form-label">Nhap Gia</label><br>
+        <input type="number" formControlName="price"/>
+    </div>
+    <button type="submit" [disabled]="!productForm.valid" class="btn btn-outline-success">Add</button>
+
+</form>
+<button class="btn btn-outline-success">
+    <a routerLink="/product" class="tt2">Back Home </a>
+  </button>
